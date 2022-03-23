@@ -1,0 +1,79 @@
+.diagram {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+}
+
+.unit {
+    fill: none;
+    stroke-width: 10;
+}
+
+.unit:nth-child(1) {
+    stroke: #86cfa3;
+    stroke-dasharray: 13 100;
+}
+
+.unit:nth-child(2) {
+    stroke: #a2c6e0;
+    stroke-dasharray: 25 100;
+    stroke-dashoffset: -12;
+}
+
+.unit:nth-child(3) {
+    stroke: #ffc7ec;
+    stroke-dasharray: 65 100;
+    stroke-dashoffset: -36;
+}
+
+
+
+.unit {
+    fill: none;
+    stroke-width: 10;
+    cursor: pointer;
+    animation-name: render;
+    animation-duration: 1.5s;
+    transition-property: all;
+    transition-duration: 1.5s;
+}
+
+.unit:hover,
+.hovered {
+    opacity: 0.8;
+    stroke-width: 12;
+}
+
+
+@keyframes render {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+
+.explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    width: 450px;
+    height: 150px;
+}
+
+.diagram_list {
+    width: 100%;
+    text-align: center;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(162, 198, 224, 1) 23%, rgba(134, 207, 163, 1) 52%, rgba(255, 199, 236, 1) 100%);
+    transition: 1.4s all ease-out;
+}
+
+.diagram_list:hover {
+    transform: rotate(10deg);
+}
+
+.diagram_list:nth-child(2):hover {
+    transform: rotate(-10deg);
+}
