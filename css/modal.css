@@ -1,0 +1,273 @@
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    transition: .3s all;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 1440px;
+    height: 768px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: rgba(55, 29, 29, 0.9);
+    transition: 0.3s all;
+}
+
+.other_window {
+    background-color: rgba(55, 29, 29, 1);
+}
+
+.modal_content {
+    position: absolute;
+    display: flex;
+    width: 1400px;
+    height: 650px;
+}
+
+.modal__title {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 545px;
+    height: 150px;
+    right: 10px;
+    top: 50px;
+    font-family: SoScary;
+    font-size: 35px;
+    line-height: 130%;
+    color: #d1d1d1;
+    letter-spacing: 0.06em;
+}
+
+.modal_subtitle {
+    font-family: 'SoScary';
+    font-size: 20px;
+    color: #d1d1d1;
+}
+
+.modal_text {
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    filter: grayscale(1);
+    transition: 2s ease-out;
+}
+
+.modal_text:hover {
+    filter: grayscale(0);
+}
+
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 1.5s all;
+}
+
+
+.js-modal-close {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 255, 255, 0.6);
+    cursor: pointer;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.js-modal-close_border {
+    display: flex;
+    margin-right: 1px;
+    margin-top: -690px;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgb(255, 255, 255, 0.6);
+    border-radius: 100px;
+    z-index: 5;
+}
+
+.button_list {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 100px;
+    width: 1440px;
+    height: 500px;
+    border-radius: 50px;
+    background-color: rgb(44, 43, 43, 0.2);
+}
+
+.modal_button {
+    width: 150px;
+    height: 150px;
+    margin-top: 150px;
+    background-color: rgba(102, 102, 102, 0.3);
+    transition: 2.5s all ease-in-out;
+}
+
+.modal_img {
+    margin-top: 45px;
+    margin-left: 380px;
+    border-radius: 50px;
+    filter: grayscale(1);
+    transition: 2s ease-out;
+}
+
+.modal_img:hover {
+    filter: grayscale(0);
+}
+
+.other_window {
+    opacity: 0;
+}
+
+
+.modal_about_title {
+    position: absolute;
+    left: 40%;
+    width: 545px;
+    height: 150px;
+    font-family: SoScary;
+    font-size: 65px;
+    line-height: 130%;
+    color: #d1d1d1;
+    letter-spacing: 0.06em;
+}
+
+
+
+.modal_about_text {
+    font-family: 'SoScary';
+    font-size: 35px;
+    text-align: justify;
+    line-height: 50px;
+    color: #d1d1d1;
+    margin-top: 110px;
+}
+
+.modal_education_list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #d1d1d1;
+    font-family: 'SoScary';
+    font-size: 35px;
+    margin-top: 150px;
+    margin-left: 0;
+}
+
+.modal_language_lis {
+    display: flex;
+    margin-top: -300px;
+    margin-right: 0;
+}
+
+.modal_skill {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #d1d1d1;
+    font-family: 'SoScary';
+    font-size: 35px;
+}
+
+.modal_skill_list {
+    margin: 40px;
+    padding-top: 50px;
+}
+
+.modal_img_skill {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    filter: grayscale(1);
+    transition: 2s all ease-out;
+}
+
+.modal_img_skill:hover {
+    filter: grayscale(0);
+}
+
+
+.code_example {
+    color: #d1d1d1;
+    margin-top: 130px;
+    font-size: 25px;
+    transition: 1.5s;
+}
+
+.code_example:hover {
+    color: rgb(192, 164, 92);
+}
+
+
+
+.modal_button:hover {
+    box-shadow:
+        1px 1px #999999,
+        2px 2px #999999,
+        3px 3px #999999,
+        4px 4px #999999,
+        5px 5px #999999,
+        6px 6px #999999,
+        7px 7px #999999;
+    transform: translateX(-7px);
+    transform: rotateZ(320deg);
+}
+
+.button_list:hover {
+    animation: shake 0.7s ease;
+}
+
+@keyframes shake {
+    15% {
+        -webkit-transform: translateX(9px);
+        transform: translateX(9px);
+    }
+
+    30% {
+        -webkit-transform: translateX(-9px);
+        transform: translateX(-9px);
+    }
+
+    40% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+
+    50% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+
+    65% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
